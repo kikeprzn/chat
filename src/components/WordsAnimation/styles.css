@@ -1,0 +1,35 @@
+:root {
+  --x: 0px;
+}
+.wa__container {
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+}
+
+.wa__words_container {
+  width: fit-content;
+  animation: slide-animation infinite linear 50s;
+}
+
+.wa__word_span_style {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  height: fit-content;
+  width: fit-content;
+  margin: 0 20px 0 20px;
+  opacity: 0.25;
+  transition: ease-in-out 0.3s;
+  white-space: nowrap;
+}
+
+.wa__word_span_style:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+@keyframes slide-animation {
+  100% {
+    transform: translateX(var(--x, 0px));
+  }
+}
